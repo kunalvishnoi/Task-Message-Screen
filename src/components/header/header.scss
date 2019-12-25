@@ -1,0 +1,45 @@
+@import "../../sass/_variable.scss";
+@import "../../sass/_mixin.scss";
+.header {
+	background-color: $white-color;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 20px 0 20px;
+	.header-start {
+		@include flexbox(flex-start, center, row);
+		width: 33%;
+	}
+	.header-center {
+		@include flexbox(space-around, stretch, row);
+		width: 33%;
+		.message {
+			color: $primary-color;
+			fill: $primary-color;
+		}
+		.icons-container {
+			@include flexbox(flex-start, center, row);
+			cursor: pointer;
+			span {
+				padding-left: 10px;
+			}
+		}
+	}
+	.header-end {
+		@include flexbox(flex-end, center, row);
+		width: 33%;
+		svg {
+			padding-left: 15px;
+		}
+		.user {
+			@include flexbox(flex-start, center, row);
+			padding-left: 15px;
+			font-weight: 400;
+			font-size: 16px;
+			color: $black-color;
+			img {
+				border-radius: 50%;
+				margin-right: 5px;
+			}
+		}
+	}
+}

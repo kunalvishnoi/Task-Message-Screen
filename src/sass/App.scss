@@ -1,0 +1,53 @@
+@import "./_variable.scss";
+@import "./_mixin.scss";
+body {
+	margin: 0;
+	box-sizing: border-box;
+	overfow: hidden;
+	background-color: $back-color;
+	height: 100vh;
+}
+.active {
+	@include active-border($primary-color);
+	svg {
+		fill: $primary-color;
+		color: $primary-color;
+	}
+	span {
+		color: $black-color;
+	}
+}
+.nactive {
+	@include active-border(transparent);
+	svg {
+		color: $secondary-color;
+		fill: none;
+	}
+	span {
+		color: $secondary-color;
+	}
+}
+.main {
+	display: flex;
+	height: calc(100vh - 100px);
+	.sidebar {
+		margin-top: 50px;
+		display: flex;
+		width: 15%;
+		justify-content: center;
+	}
+}
+.right-section {
+	width: 80%;
+}
+.footer {
+	bottom: 20px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	img {
+		filter: grayscale(100%);
+	}
+}

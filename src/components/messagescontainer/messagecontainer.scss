@@ -1,0 +1,92 @@
+@import "../../sass/_variable.scss";
+@import "../../sass/_mixin.scss";
+.message-container {
+	margin-top: 50px;
+	width: 100%;
+	@include flexbox(flex-start, center, column);
+	.top-heading {
+		@include flexbox(flex-start, center, row);
+		width: 100%;
+		svg {
+			fill: $primary-color;
+			stroke: $primary-color;
+			margin-right: 20px;
+		}
+		h2 {
+			margin-bottom: 5px;
+			margin-top: 0;
+			font-size: 28px;
+			font-weight: 400;
+		}
+	}
+	.white-container {
+		background-color: $white-color;
+		width: 100%;
+		border-radius: 15px;
+		margin-top: 20px;
+		@include flexbox(flex-start, stretch, column);
+		.white-top {
+			border-bottom: 1px solid $divider-color;
+		}
+		.white-top {
+			@include flexbox(flex-start, stretch, row);
+			color: $text-color;
+			.white-head-left {
+				@include flexbox(space-between, center, row);
+				width: 30%;
+				border-right: 1px solid $divider-color;
+				font-weight: bold;
+				padding: 10px 0 10px 0;
+				p {
+					margin: 0;
+					padding-left: 10px;
+				}
+				span {
+					font-size: 13px;
+					font-weight: 400;
+					padding-right: 10px;
+				}
+			}
+			.white-head-right {
+				@include flexbox(flex-start, center, row);
+				padding: 10px 10px 0 0px;
+				.bb {
+					@include active-border($primary-color);
+					p {
+						color: $black-color;
+					}
+					svg {
+						stroke: $primary-color;
+					}
+				}
+				.bt {
+					@include active-border(transparent);
+					p {
+						color: $secondary-color;
+					}
+					svg {
+						stroke: $secondary-color;
+					}
+				}
+				.icon-container {
+					@include flexbox(flex-start, center, row);
+					margin-right: 20px;
+					padding-bottom: 10px;
+					cursor: pointer;
+					&:nth-child(1) {
+						margin-left: 30px;
+					}
+					p {
+						margin: 0;
+						margin-right: 20px;
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+	.message-left {
+		@include flexbox(flex-start, stretch, row);
+		width: 100%;
+	}
+}

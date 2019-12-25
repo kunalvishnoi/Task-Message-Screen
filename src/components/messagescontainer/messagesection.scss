@@ -1,0 +1,85 @@
+@import "../../sass/_variable.scss";
+@import "../../sass/_mixin.scss";
+
+.message-section {
+	@include flexbox(flex-start, stretch, row);
+	width: 30%;
+	.message-right {
+		width: 100%;
+		border-right: 1px solid $divider-color;
+	}
+	.single-message {
+		@include flexbox(flex-start, stretch, column);
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 2px solid $divider-color;
+		cursor: pointer;
+		&:nth-child(1) {
+			background-color: $primary-background;
+			border-color: $primary-color;
+		}
+	}
+
+	.single-message:last-child {
+		border: none;
+	}
+	.user-detail {
+		@include flexbox(flex-start, center, row);
+		padding: 0 15px 0 15px;
+		img {
+			border-radius: 50%;
+		}
+		p {
+			margin: 0;
+			font-weight: 400;
+		}
+		span {
+			font-size: 12px;
+			color: $secondary-color;
+		}
+		.user-name {
+			padding-left: 10px;
+			p {
+				color: $black-color;
+				font-size: 16px;
+			}
+			h5 {
+				margin: 0;
+				font-size: 16px;
+			}
+		}
+		.current-name {
+			color: $primary-color;
+		}
+		.current-msg {
+			color: $black-color;
+		}
+	}
+	.below-detail {
+		@include flexbox(space-between, stretch, row);
+		margin-top: 15px;
+		padding: 0 10px 0 10px;
+		span {
+			font-size: 12px;
+			color: $secondary-color;
+		}
+		.current-time {
+			color: $black-color;
+		}
+		.current-stat {
+			color: $black-color;
+		}
+		.stats {
+			@include flexbox(flex-start, center, row);
+		}
+		.divider {
+			padding: 0 5px 0 5px;
+		}
+		svg {
+			padding-right: 5px;
+			&:nth-child(1) {
+				stroke: $eye-color;
+			}
+		}
+	}
+}

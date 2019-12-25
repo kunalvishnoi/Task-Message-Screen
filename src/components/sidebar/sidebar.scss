@@ -1,0 +1,60 @@
+@import "../../sass/_variable.scss";
+@import "../../sass/_mixin.scss";
+.sidebar-content {
+	@include flexbox(flex-start, center, column);
+	img {
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+	}
+	p {
+		font-weight: 400;
+		margin-bottom: 5px;
+		font-size: 22px;
+	}
+	span {
+		color: $secondary-color;
+		width: 70%;
+		text-align: center;
+		font-size: 14px;
+	}
+	.sidebar-list {
+		margin-top: 50px;
+	}
+	.sidebar-option {
+		@include flexbox(flex-start, center, row);
+		padding: 8px 15px 8px 15px;
+		&:nth-child(1) {
+			color: $white-color;
+			background-color: $primary-color;
+			border-radius: 3px;
+			span {
+				color: $white-color;
+			}
+		}
+
+		span {
+			padding-left: 10px;
+			font-weight: 400;
+			text-align: left;
+			font-size: 14px;
+			width: 100%;
+			font-weight: 500;
+		}
+	}
+
+	.primary {
+		color: $primary-color;
+	}
+	.white {
+		background-color: $white-color;
+		font-weight: 400;
+		font-size: 15px;
+		svg {
+			color: $secondary-color;
+		}
+		span {
+			color: $black-color;
+		}
+	}
+}

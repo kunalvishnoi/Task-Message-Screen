@@ -1,0 +1,8 @@
+@import "./_variable.scss";
+
+body {
+	margin: 0;
+	box-sizing: border-box;
+	overfow-x: hidden;
+	background-color: $white-color;
+}

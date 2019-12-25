@@ -1,0 +1,11 @@
+@mixin flexbox($justify, $align, $direction) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
+}
+
+@mixin active-border($color-value) {
+	border-bottom: 3px solid $color-value;
+	transition: 0.4s ease;
+}
